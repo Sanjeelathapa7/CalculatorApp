@@ -77,9 +77,9 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family:  Montserrat Bold
+    - family:  Tinos Bold
       fonts:
-        - asset: assets/fonts/Montserrat-Bold.ttf
+        - asset: assets/fonts/Tinos-Bold.ttf
      
   
   # For details regarding fonts from package dependencies,

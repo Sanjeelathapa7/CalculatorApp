@@ -18,7 +18,7 @@ class ButtonsView extends StatelessWidget {
       },
       borderRadius: BorderRadius.circular(10.0),
       child: Card(
-        color: const Color.fromARGB(255, 224, 219, 219),
+        color: const Color.fromARGB(255, 197, 193, 193),
         child: Center(
           child: Text(
             buttonText,

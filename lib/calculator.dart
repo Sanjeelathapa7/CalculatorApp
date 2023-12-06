@@ -40,13 +40,16 @@ class _CalculatorViewState extends State<Calculator> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.white,
-        title: const Text(
-          'Calculator App',
-          style: TextStyle(
-              fontFamily: "Times New Roman",
-              color: Colors.black,
-              fontWeight: FontWeight.bold),
+        backgroundColor: Colors.black,
+        title: const Padding(
+          padding: EdgeInsets.only(top: 30),
+          child: Text(
+            'Calculator',
+            style: TextStyle(
+                fontFamily: "Times New Roman",
+                color: Colors.white,
+                fontWeight: FontWeight.bold),
+          ),
         ),
         automaticallyImplyLeading: false,
       ),
@@ -106,7 +109,6 @@ class _CalculatorViewState extends State<Calculator> {
               ),
               itemCount: buttons.length,
               itemBuilder: (BuildContext context, int index) {
-                // clear button
                 if (index == 0) {
                   return ButtonsView(
                     buttonText: buttons[index],
@@ -118,7 +120,6 @@ class _CalculatorViewState extends State<Calculator> {
                     },
                   );
                 }
-                // delete button
                 else if (index == 3) {
                   return ButtonsView(
                     buttonText: buttons[index],
@@ -130,7 +131,6 @@ class _CalculatorViewState extends State<Calculator> {
                     },
                   );
                 }
-                // equal button
                 else if (index == buttons.length - 1) {
                   return ButtonsView(
                     buttonText: buttons[index],
@@ -141,13 +141,11 @@ class _CalculatorViewState extends State<Calculator> {
                     },
                   );
                 }
-                // number or decimal point button
                 else if (index >= 4 && index <= 18) {
                   return ButtonsView(
                     buttonText: buttons[index],
                     buttonTapped: () {
                       setState(() {
-                        // If the result is not empty, clear both userQuestion and result
                         if (result.isNotEmpty) {
                           userQuestion = '';
                           result = '';
@@ -157,7 +155,6 @@ class _CalculatorViewState extends State<Calculator> {
                     },
                   );
                 }
-                // rest of the buttons
                 return ButtonsView(
                   buttonText: buttons[index],
                   buttonTapped: () {
